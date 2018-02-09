@@ -11,6 +11,7 @@ import java.nio.ByteBuffer;
 /**
  * Created by 逆流的鱼yuiop on 16/12/18.
  * blog : http://blog.csdn.net/hejjunlin
+ * 参考：http://blog.csdn.net/hejjunlin/article/details/53729575
  */
 public class VideoClip {
     private final static String TAG = "VideoClip";
@@ -27,6 +28,7 @@ public class VideoClip {
         int sourceVTrack = 0;
         int sourceATrack = 0;
         long videoDuration, audioDuration;
+        long start = System.currentTimeMillis();
         Log.d(TAG, ">>clip start　url : " + url);
         //创建分离器
         mMediaExtractor = new MediaExtractor();
@@ -181,7 +183,7 @@ public class VideoClip {
         mMediaMuxer.release();
         mMediaExtractor.release();
         mMediaExtractor = null;
-        Log.d(TAG, ">>clip end　url : " + url);
+        Log.d(TAG, ">>clip end spend time=" + (System.currentTimeMillis() - start) + "　url : " + url);
         return true;
     }
 }
