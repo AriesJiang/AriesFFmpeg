@@ -4,26 +4,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.aries.ffmpeg.MainActivity">
+    tools:context="com.aries.ffmpeg.PlayActivity">
 
     <Button
-        android:id="@+id/ff_play"
+        android:id="@+id/ff_start"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:text="start"
-        android:onClick="onFFmpegClick"
-        android:layout_margin="5dp"/>
+        android:layout_margin="10dp"/>
 
-    <Button
-        android:id="@+id/ff_cut"
-        android:layout_width="wrap_content"
-        android:layout_height="50dp"
+    <SurfaceView
+        android:id="@+id/ff_surface_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ff_play"
-        android:text="cut"
-        android:onClick="onFFmpegClick"
-        android:layout_margin="5dp"/>
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ff_start"/>
 
 </android.support.constraint.ConstraintLayout>
