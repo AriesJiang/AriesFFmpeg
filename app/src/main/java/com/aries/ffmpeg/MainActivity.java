@@ -10,6 +10,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import java.io.File;
+
 public class MainActivity extends AppCompatActivity implements SurfaceHolder.Callback {
 
     SurfaceView surfaceView;
@@ -31,9 +33,8 @@ public class MainActivity extends AppCompatActivity implements SurfaceHolder.Cal
                 new Thread(new Runnable() {
                     @Override
                     public void run() {
-                        Log.v("videoplayer", Environment.getExternalStorageDirectory()
-                                .getAbsolutePath() );
-                        VideoPlayer.play(surfaceHolder.getSurface(), "/storage/emulated/0/DCIM/Camera/VID_20180203_120655.mp4");
+                        Log.v("videoplayer", Environment.getExternalStorageDirectory().getAbsolutePath() );
+                        VideoPlayer.play(surfaceHolder.getSurface(), Environment.getExternalStorageDirectory() + File.separator + "DCIM/Camera/VID_20180203_120655.mp4");
                     }
                 }).start();
             }
