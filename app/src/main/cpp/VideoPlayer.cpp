@@ -2,7 +2,7 @@
 
 #include <jni.h>
 #include "VideoPlayer.h"
-#include "jni_helper.hpp"
+#include "core/jni_helper.hpp"
 #include <android/log.h>
 #include <android/native_window.h>
 #include <android/native_window_jni.h>

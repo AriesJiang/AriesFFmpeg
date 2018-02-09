@@ -1,4 +1,5 @@
 cmake_minimum_required(VERSION 3.4.1)
+#把FFmpeg的头文件都包涵进来
 set(lib_src_DIR ${CMAKE_SOURCE_DIR}/../jniLibs/${ANDROID_ABI})
 include_directories(
         ${CMAKE_SOURCE_DIR}/include
@@ -32,10 +33,14 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=gnu++11 -fexceptions -frtti")
 #add_library(VideoPlayer SHARED
 #            VideoPlayer.cpp)
 
-# 取代上面两句，查找cpp目录下的所有源文件 并将名称保存到 DIR_LIB_SRCS 变量
-aux_source_directory(${CMAKE_SOURCE_DIR} DIR_LIB_SRCS)
+# 取代上面两句，查找cpp目录下的所有源文件 并将名称保存到 SRC_LIST 变量
+aux_source_directory(${CMAKE_SOURCE_DIR} SRC_LIST)
+# 查找cpp/core目录下的所有源文件 并将名称保存到 CORE_SRC_LIST 变量
+aux_source_directory(${CMAKE_SOURCE_DIR}/core CORE_SRC_LIST)
+# 并拼接到路径列表 SRC_LIST
+list(APPEND SRC_LIST ${CORE_SRC_LIST})
 # 生成链接库
-add_library (VideoPlayer SHARED ${DIR_LIB_SRCS})
+add_library (VideoPlayer SHARED ${SRC_LIST})
 
 # 导入cpp目录下的所有头文件
 include_directories(${CMAKE_SOURCE_DIR})
