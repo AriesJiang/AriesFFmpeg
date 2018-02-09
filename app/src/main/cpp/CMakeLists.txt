@@ -25,10 +25,20 @@ add_library(swscale-4_lib SHARED IMPORTED)
 set_target_properties(swscale-4_lib PROPERTIES IMPORTED_LOCATION
                         ${lib_src_DIR}/libswscale-4.so)
 
+#添加c++11 标准库
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=gnu++11 -fexceptions -frtti")
 
 # build application's shared lib
-add_library(VideoPlayer SHARED
-            VideoPlayer.cpp)
+#add_library(VideoPlayer SHARED
+#            VideoPlayer.cpp)
+
+# 取代上面两句，查找cpp目录下的所有源文件 并将名称保存到 DIR_LIB_SRCS 变量
+aux_source_directory(${CMAKE_SOURCE_DIR} DIR_LIB_SRCS)
+# 生成链接库
+add_library (VideoPlayer SHARED ${DIR_LIB_SRCS})
+
+# 导入cpp目录下的所有头文件
+include_directories(${CMAKE_SOURCE_DIR})
 
 # Include libraries needed for VideoPlayer lib
 target_link_libraries(VideoPlayer
@@ -39,3 +49,9 @@ avformat-57_lib
 avutil-55_lib
 swresample-2_lib
 swscale-4_lib)
+
+#CMakeLists 入门
+#http://blog.csdn.net/qq_35064774/article/details/52955242
+#https://juejin.im/post/595da4e25188250d8b65ddbf
+#http://blog.csdn.net/martin20150405/article/details/53284442
+#https://developer.android.com/studio/projects/add-native-code.html?hl=zh-cn

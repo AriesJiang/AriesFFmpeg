@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity implements SurfaceHolder.Cal
                     public void run() {
                         Log.v("videoplayer", Environment.getExternalStorageDirectory()
                                 .getAbsolutePath() );
-                        VideoPlayer.play(surfaceHolder.getSurface());
+                        VideoPlayer.play(surfaceHolder.getSurface(), "/storage/emulated/0/DCIM/Camera/VID_20180203_120655.mp4");
                     }
                 }).start();
             }

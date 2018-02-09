@@ -11,7 +11,7 @@ extern "C" {
  * Signature: (Ljava/lang/Object;)I
  */
 JNIEXPORT jint JNICALL Java_com_aries_ffmpeg_VideoPlayer_play
-  (JNIEnv *, jclass, jobject);
+  (JNIEnv *, jclass, jobject, jstring javaPath);
 
 #ifdef __cplusplus
 }

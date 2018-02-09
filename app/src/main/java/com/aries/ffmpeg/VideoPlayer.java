@@ -10,5 +10,5 @@ public class VideoPlayer {
         System.loadLibrary("VideoPlayer");
     }
 
-    public static native int play(Object surface);
+    public static native int play(Object surface, String javaPath);
 }

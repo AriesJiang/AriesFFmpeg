@@ -2,6 +2,7 @@
 
 #include <jni.h>
 #include "VideoPlayer.h"
+#include "jni_helper.hpp"
 #include <android/log.h>
 #include <android/native_window.h>
 #include <android/native_window_jni.h>
@@ -19,12 +20,13 @@ extern "C"{
 #define  LOGD(...)  __android_log_print(ANDROID_LOG_DEBUG, LOG_TAG, __VA_ARGS__)
 
  JNIEXPORT jint JNICALL Java_com_aries_ffmpeg_VideoPlayer_play
-        (JNIEnv *env, jclass clazz, jobject surface) {
+        (JNIEnv *env, jclass clazz, jobject surface, jstring javaPath) {
     LOGD("play");
-
+     std::string path = jni::ToNativeString(env, javaPath);
     // sd卡中的视频文件地址,可自行修改或者通过jni传入
-    char *file_name = "/storage/emulated/0/DCIM/Camera/VID_20180203_120655.mp4";
+//    char *file_name = "/storage/emulated/0/DCIM/Camera/VID_20180203_120655.mp4";
 //    char *file_name = "/storage/sdcard0/DCIM/Camera/VID_20180203_120655.mp4";
+    const char *file_name = path.c_str();
 
     av_register_all();
 
