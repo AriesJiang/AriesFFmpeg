@@ -5,6 +5,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
+/**
+ * 对FFmpeg命令的JNI集成：http://blog.csdn.net/yhaolpz/article/details/77146156
+ */
 public class MainActivity extends AppCompatActivity {
 
     @Override
