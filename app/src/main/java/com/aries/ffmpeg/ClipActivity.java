@@ -26,7 +26,8 @@ public class ClipActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View v) {
         new VideoClip().clipVideo(
-                Environment.getExternalStorageDirectory() + "/" + "VID_20180220_230848744_99.mp4",
+//                Environment.getExternalStorageDirectory() + "/" + "VID_20180220_230848744_99.mp4",
+                Environment.getExternalStorageDirectory() + "/Download/QUIK170930.mp4",
                 Integer.parseInt(mCutPoint.getText().toString())*1000*1000,
                 Integer.parseInt(mCutDuration.getText().toString())*1000*1000);
     }
