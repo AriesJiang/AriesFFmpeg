@@ -63,3 +63,10 @@ swscale-4_lib)
 #https://juejin.im/post/595da4e25188250d8b65ddbf
 #http://blog.csdn.net/martin20150405/article/details/53284442
 #https://developer.android.com/studio/projects/add-native-code.html?hl=zh-cn
+
+#FFmpegr 入门
+#徐福记 http://blog.csdn.net/u011686167/article/details/79157153
+#FFmpeg的JNI集成 http://blog.csdn.net/yhaolpz/article/details/77146156
+#郭霖 http://www.10tiao.com/html/227/201708/2650240675/1.html
+#微信 https://juejin.im/entry/59a6559f5188252447224ee8
+#雷霄骅 http://blog.csdn.net/leixiaohua1020/article/details/47008825
