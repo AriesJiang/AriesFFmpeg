@@ -33,7 +33,7 @@ public class PlayActivity extends AppCompatActivity implements SurfaceHolder.Cal
                     @Override
                     public void run() {
                         Log.v("videoplayer", Environment.getExternalStorageDirectory().getAbsolutePath() );
-                        VideoPlayer.play(surfaceHolder.getSurface(), Environment.getExternalStorageDirectory() + File.separator + "DCIM/Camera/VID_20180203_120655.mp4");
+                        VideoPlayer.play(surfaceHolder.getSurface(), FFmpegApplication.getAppContext().getVideoPath());
                     }
                 }).start();
             }
