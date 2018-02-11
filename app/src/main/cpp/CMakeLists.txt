@@ -41,6 +41,10 @@ aux_source_directory(${CMAKE_SOURCE_DIR} SRC_LIST)
 aux_source_directory(${CMAKE_SOURCE_DIR}/core CORE_SRC_LIST)
 # 并拼接到路径列表 SRC_LIST
 list(APPEND SRC_LIST ${CORE_SRC_LIST})
+# 查找cpp/ffmpeg目录下的所有源文件 并将名称保存到 FFMPEG_SRC_LIST 变量
+aux_source_directory(${CMAKE_SOURCE_DIR}/ffmpeg FFMPEG_SRC_LIST)
+# 并拼接到路径列表 SRC_LIST
+list(APPEND SRC_LIST ${FFMPEG_SRC_LIST})
 
 # 生成链接库
 add_library (VideoPlayer SHARED ${SRC_LIST})

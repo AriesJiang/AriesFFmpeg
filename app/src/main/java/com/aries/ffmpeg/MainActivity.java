@@ -5,6 +5,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
+import com.aries.ffmpeg.codec.ClipActivity;
+import com.aries.ffmpeg.ffmpeg.FFmpeg;
+
 /**
  * 对FFmpeg命令的JNI集成：http://blog.csdn.net/yhaolpz/article/details/77146156
  */
@@ -14,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        FFmpeg.run();
     }
 
     public void onFFmpegClick(View view) {

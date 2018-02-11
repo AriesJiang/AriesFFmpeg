@@ -9,7 +9,7 @@ import android.view.SurfaceView;
 import android.view.View;
 import android.widget.Button;
 
-import java.io.File;
+import com.aries.ffmpeg.play.VideoPlayer;
 
 public class PlayActivity extends AppCompatActivity implements SurfaceHolder.Callback{
 

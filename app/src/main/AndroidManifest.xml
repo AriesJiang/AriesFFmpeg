@@ -21,7 +21,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".PlayActivity" />
-        <activity android:name=".ClipActivity"></activity>
+        <activity android:name=".codec.ClipActivity"></activity>
     </application>
 
 </manifest>

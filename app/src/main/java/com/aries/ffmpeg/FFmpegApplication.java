@@ -29,5 +29,10 @@ public class FFmpegApplication extends Application {
     public void onCreate() {
         super.onCreate();
         sInstance = this;
+
+    }
+
+    static {
+        System.loadLibrary("VideoPlayer");
     }
 }

@@ -1,11 +1,13 @@
-package com.aries.ffmpeg;
+package com.aries.ffmpeg.codec;
 
-import android.os.Environment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+
+import com.aries.ffmpeg.FFmpegApplication;
+import com.aries.ffmpeg.R;
 
 public class ClipActivity extends AppCompatActivity implements View.OnClickListener {
 

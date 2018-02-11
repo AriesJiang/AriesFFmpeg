@@ -1,4 +1,4 @@
-package com.aries.ffmpeg;
+package com.aries.ffmpeg.codec;
 
 import android.media.MediaCodec;
 import android.media.MediaExtractor;
