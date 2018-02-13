@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.aries.ffmpeg.codec.ClipActivity;
+import com.aries.ffmpeg.ffmpeg.ConfigureActivity;
 import com.aries.ffmpeg.ffmpeg.FFmpeg;
 
 /**
@@ -17,11 +18,13 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        FFmpeg.run();
     }
 
     public void onFFmpegClick(View view) {
         switch (view.getId()) {
+            case R.id.ff_config:
+                startActivity(new Intent(this, ConfigureActivity.class));
+                break;
             case R.id.ff_play:
                 startActivity(new Intent(this, PlayActivity.class));
                 break;

@@ -9,11 +9,43 @@ extern "C" {
 #endif
 /*
  * Class:     com_aries_ffmpeg_ffmpeg_FFmpeg
- * Method:    run
- * Signature: ()V
+ * Method:    urlprotocolinfo
+ * Signature: ()Ljava/lang/String;
  */
-JNIEXPORT void JNICALL Java_com_aries_ffmpeg_ffmpeg_FFmpeg_run
-        (JNIEnv *, jclass);
+JNIEXPORT jstring JNICALL Java_com_aries_ffmpeg_ffmpeg_FFmpeg_urlprotocolinfo
+        (JNIEnv *, jobject);
+
+/*
+ * Class:     com_aries_ffmpeg_ffmpeg_FFmpeg
+ * Method:    avformatinfo
+ * Signature: ()Ljava/lang/String;
+ */
+JNIEXPORT jstring JNICALL Java_com_aries_ffmpeg_ffmpeg_FFmpeg_avformatinfo
+        (JNIEnv *, jobject);
+
+/*
+ * Class:     com_aries_ffmpeg_ffmpeg_FFmpeg
+ * Method:    avcodecinfo
+ * Signature: ()Ljava/lang/String;
+ */
+JNIEXPORT jstring JNICALL Java_com_aries_ffmpeg_ffmpeg_FFmpeg_avcodecinfo
+        (JNIEnv *, jobject);
+
+/*
+ * Class:     com_aries_ffmpeg_ffmpeg_FFmpeg
+ * Method:    avfilterinfo
+ * Signature: ()Ljava/lang/String;
+ */
+JNIEXPORT jstring JNICALL Java_com_aries_ffmpeg_ffmpeg_FFmpeg_avfilterinfo
+        (JNIEnv *, jobject);
+
+/*
+ * Class:     com_aries_ffmpeg_ffmpeg_FFmpeg
+ * Method:    configurationinfo
+ * Signature: ()Ljava/lang/String;
+ */
+JNIEXPORT jstring JNICALL Java_com_aries_ffmpeg_ffmpeg_FFmpeg_configurationinfo
+        (JNIEnv *, jobject);
 
 #ifdef __cplusplus
 }
