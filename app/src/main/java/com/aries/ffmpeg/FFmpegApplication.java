@@ -12,8 +12,10 @@ import java.io.File;
 
 public class FFmpegApplication extends Application {
 
-//    public static String VIDEO_PATH = File.separator + "/Download/QUIK170930.mp4"; //one_Plus
-    public static String VIDEO_PATH = File.separator + "VID_20180220_230848744_99.mp4";  //Sam sung
+//    public static String VIDEO_PATH = File.separator + "Download/QUIK170930.mp4"; //one_Plus
+//    public static String VIDEO_PATH = File.separator + "Download/concat/S8houzhi1920x1080hengping.mp4";  //Sam sung
+    public static String VIDEO_PATH = File.separator + "Download/concat/S8houzhi1920x1080suping.mp4";  //Sam sung
+//    public static String VIDEO_PATH = File.separator + "Download/concat/VID_20171209_144634.mp4";  //Sam sung
     private static FFmpegApplication sInstance;
 
     public static FFmpegApplication getAppContext() {

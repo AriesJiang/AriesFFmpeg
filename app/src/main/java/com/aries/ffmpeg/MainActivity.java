@@ -8,6 +8,7 @@ import android.view.View;
 import com.aries.ffmpeg.codec.ClipActivity;
 import com.aries.ffmpeg.ffmpeg.ConfigureActivity;
 import com.aries.ffmpeg.ffmpeg.FFmpeg;
+import com.aries.ffmpeg.frame.FrameActivity;
 
 /**
  * 对FFmpeg命令的JNI集成：http://blog.csdn.net/yhaolpz/article/details/77146156
@@ -30,6 +31,9 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.ff_cut:
                 startActivity(new Intent(this, ClipActivity.class));
+                break;
+            case R.id.ff_frame_counter:
+                startActivity(new Intent(this, FrameActivity.class));
                 break;
             default:
                 break;

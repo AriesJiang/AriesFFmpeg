@@ -22,7 +22,8 @@
         </activity>
         <activity android:name=".PlayActivity" />
         <activity android:name=".codec.ClipActivity" />
-        <activity android:name=".ffmpeg.ConfigureActivity"></activity>
+        <activity android:name=".ffmpeg.ConfigureActivity" />
+        <activity android:name=".frame.FrameActivity"></activity>
     </application>
 
 </manifest>

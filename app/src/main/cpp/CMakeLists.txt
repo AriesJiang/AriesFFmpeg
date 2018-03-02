@@ -74,3 +74,5 @@ swscale-4_lib)
 #郭霖 http://www.10tiao.com/html/227/201708/2650240675/1.html
 #微信 https://juejin.im/entry/59a6559f5188252447224ee8
 #雷霄骅 http://blog.csdn.net/leixiaohua1020/article/details/47008825
+#命令集成 http://blog.csdn.net/mabeijianxi/article/details/72904694
+#命令集成 http://blog.csdn.net/yhaolpz/article/details/77146156

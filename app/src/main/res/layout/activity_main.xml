@@ -22,7 +22,7 @@
         android:layout_height="50dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ff_config"
-        android:text="start"
+        android:text="play"
         android:onClick="onFFmpegClick"
         android:layout_margin="5dp"/>
 
@@ -33,6 +33,15 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ff_play"
         android:text="cut"
+        android:onClick="onFFmpegClick"
+        android:layout_margin="5dp"/>
+    <Button
+        android:id="@+id/ff_frame_counter"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ff_cut"
+        android:text="frame_counter"
         android:onClick="onFFmpegClick"
         android:layout_margin="5dp"/>
 
